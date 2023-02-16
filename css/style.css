@@ -53,11 +53,17 @@ h1 .logo {
 .side-nav-menu {
   display: flex;
 }
+
 .nav-menu li a {
   margin: 0 25px;
 }
+.nav-menu span:hover {
+  cursor: pointer;
+  border-bottom: 1px solid black;
+  padding-bottom: 4px;
+}
 .side-nav-menu li a {
-  font-size: 12px;
+  font-size: 14px;
   margin: 0 8px;
   color: black;
 }
@@ -68,6 +74,5 @@ h1 .logo {
   height: 7px;
   background-color: #ccc;
   transform: translateY(-25%);
-
   margin: auto 0;
 }
