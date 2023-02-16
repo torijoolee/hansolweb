@@ -1,0 +1,73 @@
+html {
+  font-size: 15px;
+  box-sizing: border-box;
+}
+.skip {
+  position: absolute;
+  top: -50px;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.skip:focus {
+  top: 0px;
+}
+a {
+  text-decoration: none;
+}
+
+header h2 {
+  display: none;
+}
+
+/* header */
+header {
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: green; */
+  height: 81px;
+}
+
+h1 .logo {
+  display: block;
+  height: 75px;
+  width: 100px;
+  background: url(/hansolImage/image/sp_com_lasola.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  color: transparent;
+}
+.nav-side {
+  display: flex;
+  align-items: center;
+}
+.nav-menu,
+.side-nav-menu {
+  display: flex;
+}
+.nav-menu li a {
+  margin: 0 25px;
+}
+.side-nav-menu li a {
+  font-size: 12px;
+  margin: 0 8px;
+  color: black;
+}
+.side-nav-menu li::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 7px;
+  background-color: #ccc;
+  transform: translateY(-25%);
+
+  margin: auto 0;
+}
