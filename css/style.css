@@ -94,7 +94,7 @@ h1 .logo {
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-.visual .img-btn {
+.slide .img-btn {
   display: block;
   position: absolute;
   top: 50%;
@@ -104,11 +104,11 @@ h1 .logo {
   background-image: url(/hansolImage/image/sp_com.png);
   color: transparent;
 }
-.visual .prev {
+.slide .prev {
   left: 80px;
   background-position: -120px -60px;
 }
-.visual .next {
+.slide .next {
   right: 80px;
   background-position: -160px -60px;
 }
@@ -116,22 +116,26 @@ h1 .logo {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 55px;
+  bottom: 50px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
+  align-items: center;
 }
 .control ul {
   display: flex;
-  margin: 0 16px;
+  margin: 0 8px;
 }
-
+.con-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .con-btn a {
   display: inline-block;
   width: 8px;
   height: 8px;
   color: transparent;
-  transform: translateY(-50%);
   background-image: url(/hansolImage/image/sp_com.png);
   opacity: 0.5;
 }
@@ -140,6 +144,7 @@ h1 .logo {
 }
 .start {
   background-position: -108px -72.5px;
+  margin-right: 5px;
 }
 .pause {
   background-position: -108px -60px;
@@ -156,7 +161,7 @@ h1 .logo {
 .bar.active {
   opacity: 1;
 }
-.slide {
+.img-con {
   color: transparent;
 }
 /* contents */
@@ -173,6 +178,7 @@ h1 .logo {
   text-align: center;
 }
 .product-link {
+  display: block;
   font-size: 18px;
   color: black;
   opacity: 0.65;
@@ -188,7 +194,33 @@ h1 .logo {
 .product-link:hover {
   color: #2c5b78;
   opacity: 1;
+  font-weight: bolder;
 }
 .product-link:hover::after {
   background-color: #2c5b78;
+}
+/* magazine */
+.mag-container {
+  height: 670px;
+  width: 100%;
+  background-color: #dfd9d2;
+  position: relative;
+}
+.mag-container .img-btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+}
+
+/* .mag-container ul {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 55px;
+  justify-content: center;
+  align-items: center;
+} */
+.mag-container .control {
+  display: flex;
+  justify-content: center;
 }
