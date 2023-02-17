@@ -1,6 +1,9 @@
 html {
-  font-size: 15px;
+  font-size: 16px;
   box-sizing: border-box;
+}
+body {
+  min-width: 1280px;
 }
 .skip {
   position: absolute;
@@ -21,11 +24,12 @@ a {
   text-decoration: none;
 }
 
-header h2 {
-  display: none;
+.hide {
+  position: absolute;
+  top: -1000px;
 }
 
-/* header */
+/* header nav-bar*/
 header {
   padding: 0 50px;
   display: flex;
@@ -75,4 +79,83 @@ h1 .logo {
   background-color: #ccc;
   transform: translateY(-25%);
   margin: auto 0;
+}
+/* section-visual */
+.visual {
+  padding: 0 50px;
+  position: relative;
+}
+
+.img-con > .slide {
+  height: 640px;
+}
+.img-con .slide {
+  background-image: url(/hansolImage/image/bg_main09.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.visual .img-btn {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 46px;
+  background-image: url(/hansolImage/image/sp_com.png);
+  color: transparent;
+}
+.visual .prev {
+  left: 80px;
+  background-position: -120px -60px;
+}
+.visual .next {
+  right: 80px;
+  background-position: -160px -60px;
+}
+.control {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 55px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.control ul {
+  display: flex;
+  margin: 0 16px;
+}
+
+.con-btn a {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  color: transparent;
+  transform: translateY(-50%);
+  background-image: url(/hansolImage/image/sp_com.png);
+  opacity: 0.5;
+}
+.con-btn a.active {
+  opacity: 1;
+}
+.start {
+  background-position: -108px -72.5px;
+}
+.pause {
+  background-position: -108px -60px;
+}
+.bar {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: white;
+  margin: 0 3px;
+  color: transparent;
+  opacity: 0.5;
+}
+.bar.active {
+  opacity: 1;
+}
+.slide {
+  color: transparent;
 }
