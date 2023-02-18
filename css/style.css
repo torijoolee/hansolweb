@@ -5,6 +5,10 @@ html {
 body {
   min-width: 1280px;
 }
+img {
+  width: 100%;
+  height: auto;
+}
 .skip {
   position: absolute;
   top: -50px;
@@ -205,22 +209,62 @@ h1 .logo {
   width: 100%;
   background-color: #dfd9d2;
   position: relative;
+  line-height: 0;
 }
 .mag-container .img-btn {
   position: absolute;
   top: 50%;
-  transform: translate(-50%);
+  transform: translateY(-50%);
 }
 
-/* .mag-container ul {
-  width: 100%;
+.slide-box-item {
   display: flex;
-  position: absolute;
-  bottom: 55px;
   justify-content: center;
   align-items: center;
-} */
-.mag-container .control {
+}
+.mag-container h2 {
+  font-size: 28px;
+  text-align: center;
+  line-height: 100%;
+  padding: 52px 0 0 0;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.mag-container > p {
+  font-size: 16px;
+  text-align: center;
+  line-height: 100%;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.box-right img {
+  width: 82px;
+}
+.slide-box-item {
   display: flex;
-  justify-content: center;
+}
+.box-right {
+  background-color: white;
+  padding: 20px 20px 0 20px;
+}
+.box-img {
+  margin-bottom: 20px;
+}
+.box-img a {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+.box-img-text {
+  text-align: start;
+  margin-left: 20px;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 300;
+}
+.box-img-text strong {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
 }
