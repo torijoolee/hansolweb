@@ -4,6 +4,7 @@ html {
 }
 body {
   min-width: 1280px;
+  overflow-x: scroll;
 }
 img {
   width: 100%;
@@ -206,22 +207,45 @@ h1 .logo {
 /* magazine */
 .mag-container {
   height: 670px;
-  width: 100%;
   background-color: #dfd9d2;
   position: relative;
   line-height: 0;
 }
+
 .mag-container .img-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-25%);
 }
-
+.mag-container .prev {
+  left: 50%;
+  margin-left: -640px;
+}
+.mag-container .next {
+  right: 50%;
+  margin-right: -640px;
+}
+.slide-box {
+  overflow-x: hidden;
+  /* width: 300vw;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+}
 .slide-box-item {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  width: 100%;
 }
+.slide-box-item:nth-child(2) {
+  margin: 0 -1250px;
+}
+.slide-box-item:nth-child(3) {
+  margin: 0 1250px;
+}
+
 .mag-container h2 {
   font-size: 28px;
   text-align: center;
@@ -241,9 +265,7 @@ h1 .logo {
 .box-right img {
   width: 82px;
 }
-.slide-box-item {
-  display: flex;
-}
+
 .box-right {
   background-color: white;
   padding: 20px 20px 0 20px;
