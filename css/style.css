@@ -4,7 +4,7 @@ html {
 }
 body {
   min-width: 1280px;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 img {
   width: 100%;
@@ -246,7 +246,7 @@ h1 .logo {
   margin: 0 1250px;
 }
 
-.mag-container h2 {
+.title {
   font-size: 28px;
   text-align: center;
   line-height: 100%;
@@ -254,7 +254,7 @@ h1 .logo {
   font-weight: bold;
   padding-bottom: 10px;
 }
-.mag-container > p {
+.sub-title {
   font-size: 16px;
   text-align: center;
   line-height: 100%;
@@ -289,4 +289,76 @@ h1 .logo {
   display: block;
   font-size: 14px;
   font-weight: bold;
+}
+/* info */
+.info-container {
+  height: 390px;
+  background-image: url(/hansolImage/image/bg_main_business.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.info-contents {
+  padding: 0 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+
+  height: 100%;
+}
+.info-item {
+  width: 280px;
+  height: 280px;
+  background-color: black;
+}
+.info-card {
+  background-color: #f2f0ed;
+  position: relative;
+}
+.info-search {
+  background-color: #fff;
+}
+.info-item h3 {
+  text-align: center;
+  font-size: 24px;
+  color: #2c5b78;
+  height: 65px;
+  line-height: 70px;
+  border-bottom: 1px solid white;
+}
+
+.info-items li a {
+  color: black;
+}
+
+.info-items li a p {
+  font-size: 12px;
+  margin-top: 30px;
+}
+.info-items {
+  display: flex;
+  flex-direction: row;
+
+  align-items: stretch;
+  color: black;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.info-items li {
+  padding: 16px 28px;
+  border-bottom: 1px solid white;
+}
+.info-card .more {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  color: transparent;
+  background-image: url(/hansolImage/image/sp_com.png);
+  background-position: -196px -60px;
 }
