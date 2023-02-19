@@ -323,8 +323,43 @@ h1 .logo {
 .info-item {
   width: 280px;
   height: 280px;
-  background-color: black;
 }
+
+.info-contents > a {
+  background: url(/hansolImage/image/bg_key_link03.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.info-contents > a span {
+  position: relative;
+  top: 10px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.info-text {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 15%;
+  line-height: 150%;
+  opacity: 0;
+}
+.info-contents > a:hover span {
+  background: rgba(45, 91, 121, 0.5);
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  top: 0;
+}
+.info-contents > a:hover .info-text {
+  opacity: 1;
+}
+
 .info-card {
   background-color: #f2f0ed;
   position: relative;
@@ -344,11 +379,13 @@ h1 .logo {
 
 .info-items li a {
   color: black;
+  line-height: 138%;
 }
 
 .info-items li a p {
   font-size: 12px;
   margin-top: 30px;
+  line-height: 0%;
 }
 .info-item {
   position: relative;
@@ -422,6 +459,7 @@ h1 .logo {
 .info-search button a {
   color: white;
 }
+
 /* popular */
 .pop-bg {
   padding: 0 130px;
@@ -513,8 +551,13 @@ h1 .logo {
   justify-content: space-between;
 }
 
-/* youtube */
-.youtube-con {
-  padding: 0 130px;
-  height: 487px;
+.footer-top {
+  height: 70px;
+  width: 100%;
+  background-color: #373f43;
+}
+.footer-btm {
+  height: 211px;
+  background-color: #4c5559;
+  width: 100%;
 }
