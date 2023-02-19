@@ -432,6 +432,28 @@ h1 .logo {
   justify-content: space-between;
   text-align: center;
 }
+.pop-item img {
+  margin-bottom: 15px;
+}
+.pop-item h5 {
+  font-size: 18px;
+}
+.pop-item h5 span {
+  color: black;
+  position: static;
+  transform: translate(0);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.pop-item:hover h5 span {
+  border-bottom: 1px solid black;
+}
+
+.pop-item span {
+  font-weight: 300;
+  color: black;
+  line-height: 150%;
+}
 /* blog */
 .blog {
   position: relative;
