@@ -550,14 +550,74 @@ h1 .logo {
   display: flex;
   justify-content: space-between;
 }
-
+/* footer */
 .footer-top {
   height: 70px;
   width: 100%;
   background-color: #373f43;
+  padding: 0 130px;
+
+  box-sizing: border-box;
+  position: relative;
 }
 .footer-btm {
   height: 211px;
   background-color: #4c5559;
   width: 100%;
+  padding: 0 130px;
+}
+
+.footet-top-left {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.footet-top-left li {
+  font-weight: 320;
+  font-size: 14px;
+}
+.footet-top-left a {
+  color: white;
+}
+.footet-top-left li:last-child::after {
+  display: none;
+}
+.footet-top-left li::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 8px;
+  background-color: #fff;
+  margin: 0 9px;
+  opacity: 0.5;
+}
+.footet-top-right {
+  color: white;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  right: 130px;
+  top: 0;
+  transform: translateY(25%);
+}
+.footet-top-right select {
+  padding: 0 1rem;
+  width: 200px;
+}
+
+.footet-top-right p {
+  padding: 0.5rem 1rem;
+  background-color: #2a3034;
+  margin: 0 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+.footet-top-right p::after {
+  content: "제품구매 문의는 대리점찾기에서 가까운 매장을 검색 해 주세요";
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.footet-top-right p span {
+  font-size: 12px;
 }
