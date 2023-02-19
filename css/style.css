@@ -365,7 +365,6 @@ h1 .logo {
 .info-items {
   display: flex;
   flex-direction: row;
-
   align-items: stretch;
   color: black;
   flex-wrap: wrap;
@@ -434,11 +433,64 @@ h1 .logo {
   text-align: center;
 }
 /* blog */
+.blog {
+  position: relative;
+}
 .blog-con {
   padding: 0 130px;
   height: 800px;
   background-color: #f2f0ed;
 }
+.blog-control-bar {
+  position: absolute;
+  bottom: 50px;
+}
+.blog-control-bar ul li a {
+  background-color: #d7d8d6;
+  opacity: 1;
+}
+.blog-control-bar ul li a:hover {
+  background-color: #2c5b78;
+}
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 560px;
+  background: white;
+  text-align: center;
+}
+.blog-item img {
+  padding-bottom: 32px;
+}
+.blog-item h5 {
+  all: unset;
+  color: black;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline;
+}
+.blog-text-sub {
+  margin-top: 32px;
+  text-align: start;
+  padding: 0 28px;
+}
+.blog-item p {
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+.blog-item p span {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+.blog-contents {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* youtube */
 .youtube-con {
   padding: 0 130px;
