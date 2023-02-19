@@ -290,6 +290,20 @@ h1 .logo {
   font-size: 14px;
   font-weight: bold;
 }
+/* vedio */
+.video-container {
+  width: 100vw;
+}
+.video-container video {
+  width: 1100px;
+
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 83px;
+}
+
 /* info */
 .info-container {
   height: 390px;
