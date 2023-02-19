@@ -376,6 +376,10 @@ h1 .logo {
   border-bottom: 1px solid white;
   font-weight: bold;
 }
+select,
+input {
+  outline: none;
+}
 
 .info-items li a {
   color: black;
@@ -620,4 +624,37 @@ h1 .logo {
 
 .footet-top-right p span {
   font-size: 12px;
+}
+.footer-btm {
+  color: white;
+  font-size: 14px;
+  line-height: 180%;
+  font-weight: 350;
+  position: relative;
+}
+.footer-btm > p {
+  position: absolute;
+  top: 40px;
+  background-color: #fff;
+  background: url(/hansolImage/image/sp_com.png);
+  width: 132px;
+  height: 55px;
+  background-position: -160px 0;
+  color: transparent;
+}
+.footer-btm address span {
+  font-size: 18px;
+}
+.footer-btm address span::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 8px;
+  background-color: #fff;
+  margin: 0 9px;
+  opacity: 0.5;
+}
+.footer-btm-text {
+  position: absolute;
+  bottom: 40px;
 }
