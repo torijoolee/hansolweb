@@ -130,16 +130,13 @@ h1 .logo {
   height: 690px;
 }
 .img-con .slide {
-  background-image: url(/image/main01.jpg);
+  /* background-image: url(/image/main01.jpg); */
   background-repeat: no-repeat;
-  background-position: 0 0;
-  display: none;
-  opacity: 0;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.5s ease-in;
 }
-.img-con .slide.show {
-  display: block;
-  opacity: 1;
-}
+
 .slide .img-btn {
   display: block;
   position: absolute;
