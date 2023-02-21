@@ -384,7 +384,7 @@ h1 .logo {
 .blog-item img {
   padding-bottom: 32px;
 }
-.blog-item h5 {
+.blog-item .blog-text h5 {
   all: unset;
   opacity: 0.85;
   width: 100%;
@@ -451,14 +451,14 @@ h1 .logo {
   position: relative;
 }
 
-/* info */
-.info-container {
+/* ect */
+.ect-container {
   height: 390px;
   background-image: url(/hansolImage/image/bg_main_business.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
-.info-contents {
+.ect-contents {
   padding: 0 130px;
   display: flex;
   justify-content: space-between;
@@ -467,12 +467,12 @@ h1 .logo {
 
   height: 100%;
 }
-.info-item {
+.ect-item {
   width: 280px;
   height: 280px;
 }
 
-.info-contents > a {
+.ect-contents > a {
   background: url(/hansolImage/image/bg_key_link03.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -480,12 +480,12 @@ h1 .logo {
   position: relative;
   transition: all 0.3s ease-in-out;
 }
-.info-contents > a span {
+.ect-contents > a span {
   position: relative;
   opacity: 0;
   transition: all 0.5s;
 }
-.info-text {
+.ect-text {
   position: absolute;
   text-align: center;
   width: 100%;
@@ -493,7 +493,7 @@ h1 .logo {
   line-height: 150%;
   opacity: 0;
 }
-.info-contents > a:hover span {
+.ect-contents > a:hover span {
   background: rgba(45, 91, 121, 0.5);
   display: block;
   position: absolute;
@@ -502,18 +502,18 @@ h1 .logo {
   opacity: 1;
   top: 0;
 }
-.info-contents > a:hover .info-text {
+.ect-contents > a:hover .ect-text {
   opacity: 1;
 }
 
-.info-card {
+.ect-card {
   background-color: #f2f0ed;
   position: relative;
 }
-.info-search {
+.ect-search {
   background-color: #fff;
 }
-.info-item h3 {
+.ect-item h3 {
   text-align: center;
   font-size: 24px;
   color: #2c5b78;
@@ -526,25 +526,25 @@ select,
 input {
   outline: none;
 }
-.info-items li:hover p {
+.ect-items li:hover p {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-.info-items li p {
+.ect-items li p {
   line-height: 138%;
   font-size: 16px;
   margin-bottom: 15px;
 }
 
-.info-items li a {
+.ect-items li a {
   font-size: 12px;
 
   line-height: 0%;
 }
-.info-item {
+.ect-item {
   position: relative;
 }
-.info-item h5 {
+.ect-item h5 {
   position: absolute;
   top: 58%;
   left: 50%;
@@ -553,7 +553,7 @@ input {
   font-size: 18px;
   font-weight: bold;
 }
-.info-items {
+.ect-items {
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -561,11 +561,11 @@ input {
   flex-wrap: wrap;
   box-sizing: border-box;
 }
-.info-items li {
+.ect-items li {
   padding: 16px 28px;
   border-bottom: 1px solid white;
 }
-.info-card .more {
+.ect-card .more {
   position: absolute;
   top: 18px;
   right: 22px;
@@ -581,37 +581,37 @@ input {
 }
 
 /* search */
-.info-search {
+.ect-search {
   position: relative;
 }
-.info-search .search {
+.ect-search .search {
   display: flex;
   padding: 0 22px;
   flex-direction: column;
 }
 
-.info-search select,
-.info-search input,
-.info-search button {
+.ect-search select,
+.ect-search input,
+.ect-search button {
   background-color: #f2f0ed;
   height: 46px;
   border: none;
 }
-.info-search select {
+.ect-search select {
   margin-bottom: 11px;
   text-indent: 20px;
   appearance: none;
 }
 
-.info-search input {
+.ect-search input {
   text-indent: 20px;
 }
-.info-search button {
+.ect-search button {
   margin-top: 30px;
   text-align: center;
   background-color: #2c5b78;
 }
-.info-search button a {
+.ect-search button a {
   color: white;
 }
 /* footer */
@@ -666,6 +666,7 @@ input {
 .footet-top-right select {
   padding: 0 1rem;
   width: 200px;
+  appearance: none;
 }
 
 .footet-top-right p {
@@ -701,9 +702,6 @@ input {
   background-position: -160px 0;
   color: transparent;
 }
-.footer-btm address span {
-  font-size: 18px;
-}
 .footer-btm address span::before {
   content: "";
   display: inline-block;
@@ -716,4 +714,10 @@ input {
 .footer-btm-text {
   position: absolute;
   bottom: 40px;
+  opacity: 0.85;
+}
+.footer-btm-text .address span {
+  font-size: 18px;
+  opacity: 1;
+  font-weight: 500;
 }
