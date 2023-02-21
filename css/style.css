@@ -134,6 +134,7 @@ h1 .logo {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   transition: all 0.5s ease-in;
 }
 

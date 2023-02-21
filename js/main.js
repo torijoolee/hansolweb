@@ -4,10 +4,12 @@
   const nextBtn = document.querySelector(".next");
   const visualElem = document.querySelector(".img-con .slide");
   const headerBg = ["main01.jpg", "main02.jpg", "main03.jpg", "main04.jpg"];
-  const barElems = document.querySelectorAll(".control li a");
+  const barElems = document.querySelectorAll(".visual .control .bar");
+  console.log(barElems);
 
   let currentPage = 0;
   let totalPage = headerBg.length;
+  let currentBar = 0;
 
   prevBtn.addEventListener("click", function () {
     if (currentPage > 0) {
@@ -35,5 +37,13 @@
   }
   changeImage();
 
-  function barActive() {}
+  function barActive() {
+    barElems.forEach((bar) => {
+      bar.classList.remove("active");
+    });
+    barElems[currentPage].classList.add("active");
+  }
+
+  //먼저 active를 모두 제거해준다
+  //currentPage와 같은 bar에 active를 붙여준다.
 })();
