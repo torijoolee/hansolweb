@@ -1,6 +1,7 @@
 html {
   font-size: 16px;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 body {
   min-width: 1280px;
@@ -27,23 +28,26 @@ img {
 }
 a {
   text-decoration: none;
+  color: black;
 }
 
 .hide {
   position: absolute;
   top: -1000px;
 }
-
+.padding {
+  padding: 0 50px;
+}
 /* header nav-bar*/
 header {
   padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background-color: green; */
   height: 81px;
+  font-weight: 400;
+  font-size: 18px;
 }
-
 h1 .logo {
   display: block;
   height: 75px;
@@ -62,19 +66,29 @@ h1 .logo {
 .side-nav-menu {
   display: flex;
 }
-
 .nav-menu li a {
-  margin: 0 25px;
+  margin: 0 20px;
+  opacity: 0.65;
 }
-.nav-menu span:hover {
+.nav-menu li {
+  opacity: 0.65;
+}
+.nav-menu li:hover {
+  opacity: 1;
+}
+
+.nav-menu span:hover,
+.side-nav-menu li span:hover {
   cursor: pointer;
   border-bottom: 1px solid black;
-  padding-bottom: 4px;
+  padding-bottom: 2px;
+  opacity: 1;
 }
 .side-nav-menu li a {
   font-size: 14px;
-  margin: 0 8px;
-  color: black;
+  margin: 0 10px;
+  font-weight: 400;
+  opacity: 0.65;
 }
 .side-nav-menu li::after {
   content: "";
@@ -85,14 +99,19 @@ h1 .logo {
   transform: translateY(-25%);
   margin: auto 0;
 }
+.side-nav-menu li a:hover {
+  opacity: 1;
+}
+.side-nav-menu li:last-child::after {
+  display: none;
+}
 /* section-visual */
 .visual {
-  padding: 0 50px;
   position: relative;
 }
 
 .img-con > .slide {
-  height: 640px;
+  height: 690px;
 }
 .img-con .slide {
   background-image: url(/hansolImage/image/bg_main09.jpg);
