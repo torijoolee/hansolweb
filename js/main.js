@@ -9,7 +9,6 @@
 
   let currentPage = 0;
   let totalPage = headerBg.length;
-  let currentBar = 0;
 
   prevBtn.addEventListener("click", function () {
     if (currentPage > 0) {
@@ -33,6 +32,7 @@
 
   function changeImage() {
     visualElem.style.background = `url(/image/${headerBg[currentPage]}) no-repeat 0 0 `;
+    visualElem.style.transition = `0.5s`;
     barActive();
   }
   changeImage();
@@ -43,7 +43,4 @@
     });
     barElems[currentPage].classList.add("active");
   }
-
-  //먼저 active를 모두 제거해준다
-  //currentPage와 같은 bar에 active를 붙여준다.
 })();

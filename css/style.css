@@ -354,11 +354,19 @@ h1 .logo {
 .blog {
   position: relative;
 }
+
 .blog-con {
   padding: 0 130px;
   height: 800px;
   background-color: #f2f0ed;
+  position: relative;
 }
+.side {
+  display: flex;
+  max-width: 1280px;
+  overflow: hidden;
+}
+
 .blog-control-bar {
   position: absolute;
   bottom: 50px;
@@ -378,6 +386,7 @@ h1 .logo {
   height: 560px;
   background: white;
   text-align: center;
+  margin-right: 16px;
 }
 .blog-item:hover h5 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.65);
