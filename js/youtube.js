@@ -1,6 +1,7 @@
 (() => {
   const youtubeBar = document.querySelectorAll(".youtube .bar-lg");
   const container = document.querySelector(".youtube-container");
+  let current;
 
   for (let i = 0; i < youtubeBar.length; i++) {
     youtubeBar[i].dataset.link = i;
