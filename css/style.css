@@ -242,24 +242,39 @@ h1 .logo {
   height: 670px;
   background-color: #dfd9d2;
   position: relative;
+  width: 100%;
+  margin: auto;
 }
 .mag-container .img-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-25%);
 }
+/* .magazine .slide-box {
+  margin: 0 auto;
+  transform: translateX(-88%);
+} */
 .mag-container .prev {
+  cursor: pointer;
   left: 50%;
   margin-left: -660px;
+  z-index: 10;
+}
+button {
+  background: none;
+  border: none;
 }
 .mag-container .next {
+  cursor: pointer;
   right: 50%;
   margin-right: -660px;
+  z-index: 10;
 }
 .bar-lg {
   width: 50px;
   height: 5px;
 }
+
 .slide-box-item {
   display: flex;
   justify-content: center;
@@ -267,12 +282,13 @@ h1 .logo {
   position: absolute;
   width: 100%;
 }
-.slide-box-item:nth-child(2) {
-  margin: 0 -1280px;
+/* .slide-box-item:nth-child(2) {
+  transform: translateX(176vw);
 }
+
 .slide-box-item:nth-child(3) {
-  margin: 0 1280px;
-}
+  transform: translateX(88vw);
+} */
 .box-right img {
   width: 82px;
 }
