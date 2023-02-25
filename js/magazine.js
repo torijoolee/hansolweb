@@ -4,6 +4,7 @@
   const slideItem = document.querySelectorAll(".slide-box .slide-box-item");
   const prevBtn = document.querySelector(".mag-container .prev");
   const nextBtn = document.querySelector(".mag-container .next");
+  const magBars = document.querySelectorAll(".magazine .bar-lg");
 
   let currentPage = 1;
   let totalPage = slideItem.length;
@@ -13,37 +14,76 @@
   for (let i = 1; i < totalPage; i++) {
     slideItem[i].style.left = i * size + "px";
   }
+
   slideBox.style.transform = `translateX( ${currentPage * -size}px) `;
 
   nextBtn.addEventListener("click", function () {
     slideBox.style.transition = "0.5s ease-in-out";
     currentPage++;
+
     console.log(currentPage);
     slideBox.style.transform = `translateX( ${currentPage * -size}px) `;
+    jump();
+    clearInterval();
+    barActive();
   });
 
   prevBtn.addEventListener("click", function () {
     slideBox.style.transition = "transform 0.5s ease-in-out";
     currentPage--;
-    console.log(currentPage);
 
+    console.log(currentPage);
     slideBox.style.transform = `translateX( ${currentPage * -size}px) `;
+    jump();
+    clearInterval();
+    barActive();
   });
 
   // jump to first, last slide
-  slideBox.addEventListener("transitionend", () => {
-    if (slideItem[currentPage].id === "lastClone") {
-      console.log("last");
-      slideBox.style.transition = "none";
-      currentPage = slideItem.length - 2;
+  function jump() {
+    slideBox.addEventListener("transitionend", () => {
+      if (slideItem[currentPage].id === "lastClone") {
+        console.log("last");
+        slideBox.style.transition = "none";
+        currentPage = slideItem.length - 2;
+        slideBox.style.transform = `translateX( ${currentPage * -size}px) `;
+        currentPage = 1;
+      }
+      if (slideItem[currentPage].id === "firstClone") {
+        slideBox.style.transition = "none";
+        currentPage = totalPage - currentPage;
+        slideBox.style.transform = `translateX( ${currentPage * -size}px) `;
+      }
+    });
+  }
+  // continue
+  barActive();
+  setInterval(function () {
+    if (currentPage < totalPage) {
+      currentPage++;
       console.log(currentPage);
-      slideBox.style.transform = `translateX( ${currentPage * -size}px) `;
+      slideBox.style.transition = "0.5s ease-in-out";
+      slideBox.style.transform = `translateX( ${currentPage * -size}px)`;
+      barActive();
+      jump();
+      clearInterval();
+    } else {
+      return;
     }
-    if (slideItem[currentPage].id === "firstClone") {
-      slideBox.style.transition = "none";
-      currentPage = totalPage - currentPage;
-      console.log(currentPage);
-      slideBox.style.transform = `translateX( ${currentPage * -size}px) `;
+  }, 5000);
+
+  function barActive() {
+    magBars.forEach((bar) => {
+      bar.classList.remove("active");
+    });
+    if (currentPage === 4) {
+      magBars[0].classList.add("active");
+      return;
     }
-  });
+    if (magBars.classList == "null") {
+      return;
+    }
+
+    magBars[currentPage - 1].classList.add("active");
+  }
 })();
