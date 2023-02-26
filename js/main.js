@@ -5,9 +5,12 @@
   const visualElem = document.querySelector(".img-con .slide");
   const headerBg = ["main01.jpg", "main02.jpg", "main03.jpg", "main04.jpg"];
   const visBars = document.querySelectorAll(".visual .control .bar");
+  const startBtn = document.querySelector(".visual .start");
+  const stopBtn = document.querySelector(".visual .pause");
 
   let currentPage = 0;
   let totalPage = headerBg.length;
+  let toggle = false;
 
   prevBtn.addEventListener("click", function () {
     if (currentPage > 0) {
@@ -47,7 +50,7 @@
   }
   barActive();
 
-  const auto = setInterval(function () {
+  function auto() {
     visBars.forEach((bar) => {
       bar.classList.remove("active");
     });
@@ -61,5 +64,27 @@
     changeImage();
     visBars[currentPage].classList.add("active");
     console.log(currentPage);
-  }, 3000);
+  }
+
+  let interver = setInterval(auto, 3000);
+
+  // pause button
+  stopBtn.addEventListener("click", function () {
+    toggle = true;
+    startBtn.classList.remove("active");
+    stopBtn.classList.add("active");
+    clearInterval(interver);
+  });
+
+  //start button
+  startBtn.addEventListener("click", function () {
+    startBtn.classList.add("active");
+    stopBtn.classList.remove("active");
+    if (toggle == true) {
+      toggle = false;
+      interver = setInterval(auto, 3000);
+    } else {
+      clearInterval(interver);
+    }
+  });
 })();
