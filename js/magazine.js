@@ -8,42 +8,22 @@
 
   let currentPage = 1;
   let totalPage = slideItem.length;
+  //5
   const size = slideItem[0].clientWidth;
   console.log(size);
 
+  //left array
   for (let i = 1; i < totalPage; i++) {
     slideItem[i].style.left = i * size + "px";
   }
 
+  //main view
   slideBox.style.transform = `translateX( ${currentPage * -size}px) `;
-
-  nextBtn.addEventListener("click", function () {
-    slideBox.style.transition = "0.5s ease-in-out";
-    currentPage++;
-
-    console.log(currentPage);
-    slideBox.style.transform = `translateX( ${currentPage * -size}px) `;
-    jump();
-    clearInterval();
-    barActive();
-  });
-
-  prevBtn.addEventListener("click", function () {
-    slideBox.style.transition = "transform 0.5s ease-in-out";
-    currentPage--;
-
-    console.log(currentPage);
-    slideBox.style.transform = `translateX( ${currentPage * -size}px) `;
-    jump();
-    clearInterval();
-    barActive();
-  });
 
   // jump to first, last slide
   function jump() {
     slideBox.addEventListener("transitionend", () => {
       if (slideItem[currentPage].id === "lastClone") {
-        console.log("last");
         slideBox.style.transition = "none";
         currentPage = slideItem.length - 2;
         slideBox.style.transform = `translateX( ${currentPage * -size}px) `;
@@ -54,24 +34,28 @@
         currentPage = totalPage - currentPage;
         slideBox.style.transform = `translateX( ${currentPage * -size}px) `;
       }
+      if (slideItem[currentPage].id === null) {
+        clearInterval(autoPlay);
+        return;
+      }
     });
   }
   // continue
   barActive();
-  setInterval(function () {
-    if (currentPage < totalPage) {
+  const autoPlay = setInterval(function () {
+    if (currentPage < totalPage - 1 || currentPage > 0) {
       currentPage++;
-      console.log(currentPage);
       slideBox.style.transition = "0.5s ease-in-out";
       slideBox.style.transform = `translateX( ${currentPage * -size}px)`;
-      barActive();
       jump();
-      clearInterval();
+      barActive();
+      clearInterval(autoPlay);
     } else {
+      clearInterval(autoPlay);
       return;
     }
   }, 5000);
-
+  //bar activate
   function barActive() {
     magBars.forEach((bar) => {
       bar.classList.remove("active");
@@ -81,9 +65,35 @@
       return;
     }
     if (magBars.classList == "null") {
+      clearInterval(autoPlay);
       return;
     }
-
     magBars[currentPage - 1].classList.add("active");
   }
+
+  nextBtn.addEventListener("click", function () {
+    if (
+      currentPage >= totalPage.length - 1 ||
+      slideItem[currentPage].id === "null"
+    ) {
+      return;
+    }
+    slideBox.style.transition = "0.5s ease-in-out";
+    currentPage++;
+    slideBox.style.transform = `translateX( ${currentPage * -size}px) `;
+    jump();
+    barActive();
+  });
+
+  prevBtn.addEventListener("click", function () {
+    if (currentPage < 0 || slideItem[currentPage].id === "null") {
+      return;
+    }
+    slideBox.style.transition = "transform 0.5s ease-in-out";
+    currentPage--;
+
+    slideBox.style.transform = `translateX( ${currentPage * -size}px) `;
+    jump();
+    barActive();
+  });
 })();
