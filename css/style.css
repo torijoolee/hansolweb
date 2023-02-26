@@ -56,12 +56,26 @@ a {
   opacity: 0.65;
 }
 /* header nav-bar*/
+.header-menu {
+  width: 100vw;
+  height: 230px;
+  background-color: #2c5b78;
+  position: absolute;
+  top: 80px;
+  font-weight: 400;
+  opacity: 0;
+  z-index: 100;
+  transform-origin: 100% 0;
+  transform: translateY(0%);
+  transition: all 0.5s ease-in;
+}
+
 header {
   padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 81px;
+  height: 80px;
   font-weight: 400;
   font-size: 18px;
   background-color: #fff;
@@ -125,26 +139,30 @@ h1 .logo {
 }
 .side-nav-menu li:last-child::after {
   display: none;
+  margin-right: 0;
 }
-.header-menu {
-  width: 100vw;
-  height: 230px;
-  background-color: #2c5b78;
-  opacity: 0.85;
-  position: absolute;
-  top: 80px;
-  z-index: 95;
-  color: white;
-  font-weight: 400;
-}
+
 .menu-wrap {
   display: flex;
-  padding: 30px 195px;
+  flex-shrink: 0;
+  padding: 26px 190px;
 }
+.menu li a {
+  color: white;
+  display: block;
+  line-height: 122%;
+}
+.menu {
+  margin-right: 42px;
+}
+.menu li a:hover span {
+  border-bottom: 1px solid white;
+}
+
 .menu li {
   margin-bottom: 12px;
-  margin-right: 40px;
 }
+
 /* visual */
 .visual {
   position: relative;
