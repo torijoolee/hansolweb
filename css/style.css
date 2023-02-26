@@ -247,6 +247,9 @@ h1 .logo {
 .img-con {
   color: transparent;
 }
+.mobile-visual {
+  display: none;
+}
 /* contents */
 .product-contents {
   padding: 50px 0 22px 0px;
