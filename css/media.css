@@ -145,10 +145,12 @@
   .card-info p span {
     color: #2c5b78;
     font-weight: bold;
-    margin: 0 20px;
+    margin-right: 30px;
   }
   .card-info p {
-    font-weight: 300;
+    font-weight: 350;
+    opacity: 1;
+    margin: 0 20px;
   }
 
   /* footer */
@@ -156,10 +158,40 @@
   .footer-btm > p {
     display: none;
   }
-  .footet-top-left {
+  .footer-top-left {
     display: none;
   }
   .footer select {
     display: none;
+  }
+  .footer-top {
+    height: 200px;
+    background-color: #4c5559;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .footer-top-right {
+    position: static;
+  }
+  .footer-top-right p {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .footer-btm {
+    display: none;
+  }
+  .footer-mobile {
+    display: block;
+    color: white;
+    width: 55%;
+    margin: 0 auto;
+    line-height: 180%;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 40px;
   }
 }

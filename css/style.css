@@ -724,23 +724,23 @@ input {
   width: 100%;
   padding: 0 130px;
 }
-.footet-top-left {
+.footer-top-left {
   display: flex;
   height: 100%;
   align-items: center;
 }
-.footet-top-left li {
+.footer-top-left li {
   font-weight: 400;
   font-size: 14px;
   opacity: 0.65;
 }
-.footet-top-left a {
+.footer-top-left a {
   color: white;
 }
-.footet-top-left li:last-child::after {
+.footer-top-left li:last-child::after {
   display: none;
 }
-.footet-top-left li::after {
+.footer-top-left li::after {
   content: "";
   display: inline-block;
   width: 1px;
@@ -749,7 +749,7 @@ input {
   margin: 0 9px;
   opacity: 0.5;
 }
-.footet-top-right {
+.footer-top-right {
   color: white;
   display: flex;
   justify-content: end;
@@ -758,26 +758,26 @@ input {
   top: 0;
   transform: translateY(25%);
 }
-.footet-top-right select {
+.footer-top-right select {
   padding: 0 1rem;
   width: 200px;
   appearance: none;
 }
 
-.footet-top-right p {
+.footer-top-right p {
   padding: 0.5rem 1rem;
   background-color: #2a3034;
   margin: 0 0.5rem;
   text-align: center;
   font-weight: bold;
 }
-.footet-top-right p::after {
+.footer-top-right p::after {
   content: "제품구매 문의는 대리점찾기에서 가까운 매장을 검색 해 주세요";
   font-size: 12px;
   font-weight: 300;
 }
 
-.footet-top-right p span {
+.footer-top-right p span {
   font-size: 12px;
 }
 .footer-btm {
@@ -815,4 +815,7 @@ input {
   font-size: 18px;
   opacity: 1;
   font-weight: 500;
+}
+.footer-mobile {
+  display: none;
 }
