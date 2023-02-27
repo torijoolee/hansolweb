@@ -706,6 +706,9 @@ input {
 .ect-search button a {
   color: white;
 }
+.mobile-cards {
+  display: none;
+}
 /* footer */
 .footer-top {
   height: 70px;

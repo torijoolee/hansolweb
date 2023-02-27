@@ -114,14 +114,52 @@
   .you-viewport {
     width: 90vw;
   }
+  /* ect */
+  .ect-container {
+    height: 480px;
+  }
   .ect-contents {
     padding: 0 20px;
     flex-wrap: wrap;
+    justify-content: space-between;
+    height: 75%;
+    margin-bottom: -10px;
   }
   .ect-card {
     display: none;
   }
-  .footer {
+  .mobile-cards {
+    display: block;
+    padding: 0 20px;
+  }
+  .mobile-cards .card-info {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    width: 100%;
+    background-color: #f2f0ed;
+    padding: 10px 0;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .card-info p span {
+    color: #2c5b78;
+    font-weight: bold;
+    margin: 0 20px;
+  }
+  .card-info p {
+    font-weight: 300;
+  }
+
+  /* footer */
+
+  .footer-btm > p {
+    display: none;
+  }
+  .footet-top-left {
+    display: none;
+  }
+  .footer select {
     display: none;
   }
 }
