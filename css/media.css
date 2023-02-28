@@ -6,6 +6,9 @@
   .header-menu {
     display: none;
   }
+  .nav-side .logo {
+    width: 65px;
+  }
   .nav-side {
     width: 100%;
     display: flex;
@@ -53,7 +56,7 @@
     width: 100%;
   }
   .product-link:first-child::after {
-    width: 250px;
+    width: 240px;
   }
 
   /* video */
@@ -106,37 +109,53 @@
   .pop-item img {
     width: 600px;
   }
-}
-/* width: 75%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 83px; */
-/* .skip {
+  .pop-item img:hover {
+    transform: scale(1);
+  }
+
+  /* footer */
+
+  .footer-btm > p {
     display: none;
   }
-  body {
-    min-width: 100%;
-    overflow-x: hidden;
+  .footer-top-left {
+    display: none;
   }
-  .header {
-    height: 50px;
+  .footer select {
+    display: none;
   }
-} */
-/* .padding {
+  .footer-top {
+    height: 200px;
+    background-color: #4c5559;
     padding: 0 20px;
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
   }
-  
-  .mobile-visual {
-    position: relative;
+  .footer-top-right {
+    position: static;
   }
- 
-  
-
-  .slide .img-btn {
-    z-index: 100;
-  } */
+  .footer-top-right p {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .footer-btm {
+    display: none;
+  }
+  .footer-mobile {
+    display: block;
+    color: white;
+    width: 55%;
+    margin: 0 auto;
+    line-height: 180%;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
 
 /* 
   .nav-side .logo {
@@ -256,47 +275,3 @@
     opacity: 1;
     margin: 0 20px;
   } */
-
-/* footer */
-
-/* .footer-btm > p {
-    display: none;
-  }
-  .footer-top-left {
-    display: none;
-  }
-  .footer select {
-    display: none;
-  }
-  .footer-top {
-    height: 200px;
-    background-color: #4c5559;
-    padding: 0 20px;
-    display: flex;
-    flex-shrink: 1;
-    flex-direction: column;
-    width: 100%;
-    justify-content: space-around;
-  }
-  .footer-top-right {
-    position: static;
-  }
-  .footer-top-right p {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .footer-btm {
-    display: none;
-  }
-  .footer-mobile {
-    display: block;
-    color: white;
-    width: 55%;
-    margin: 0 auto;
-    line-height: 180%;
-    font-size: 14px;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-} */
