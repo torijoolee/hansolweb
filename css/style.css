@@ -299,7 +299,7 @@ h1 .logo {
 .mag-container .prev {
   cursor: pointer;
   left: 50%;
-  margin-left: -660px;
+  margin-left: -630px;
   z-index: 10;
 }
 button {
@@ -309,7 +309,7 @@ button {
 .mag-container .next {
   cursor: pointer;
   right: 50%;
-  margin-right: -660px;
+  margin-right: -630px;
   z-index: 10;
 }
 .bar-lg {
@@ -355,10 +355,10 @@ button {
 }
 /* video */
 .video-container {
-  width: 100vw;
+  width: 100%;
 }
 .video-container video {
-  width: 1100px;
+  width: 75%;
   object-fit: cover;
   display: block;
   margin: 0 auto;
@@ -371,17 +371,27 @@ button {
   height: 570px;
   margin: 0 auto;
 }
+.viewport {
+  width: 80vw;
+  overflow-x: hidden;
+}
 .pop-contents {
   display: flex;
+  flex-wrap: no-wrap;
   justify-content: space-between;
   text-align: center;
+  flex-shrink: 1;
 }
 .pop-item {
   margin: 0 4px;
+  margin-bottom: 20px;
 }
 .pop-item img {
   margin-bottom: 15px;
   transition: all 0.5s ease-out;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
 .pop-item img:hover {
@@ -415,16 +425,7 @@ button {
   position: relative;
 }
 .viewport {
-  max-width: 80vw;
-  overflow: hidden;
-  /* background-color: #fff; */
   margin: 0 auto;
-}
-.scroll-con {
-  display: flex;
-  justify-content: space-between;
-
-  width: 240vw;
 }
 
 .blog-control-bar {
@@ -489,24 +490,25 @@ button {
 }
 .blog-contents {
   display: flex;
+  flex-shrink: 0;
   justify-content: space-between;
 }
 /* youtube */
+.youtube {
+  width: 100%;
+}
 .you-viewport {
-  width: 80vw;
   overflow-x: hidden;
-  margin: 0 auto;
 }
 .youtube-container {
   display: flex;
-  width: 240vw;
 }
 
 .youtube-contents {
   height: 340px;
-  /* background-color: #fff; */
+  display: block;
   display: flex;
-  align-items: flex-start;
+  margin: 0 auto;
 }
 
 .youtube-contents .you-item:hover span {
@@ -722,7 +724,6 @@ input {
   height: 211px;
   background-color: #4c5559;
   width: 100%;
-  padding: 0 130px;
 }
 .footer-top-left {
   display: flex;
