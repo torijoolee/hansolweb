@@ -118,23 +118,23 @@
   }
   /* blog */
 
-  .blog-con {
+  /* .blog-con {
     padding: 0 20px;
     height: 630px;
-  }
-  .blog-item p {
+  } */
+  /* .blog-item p {
     display: none;
   }
   .blog-item {
     height: auto;
-  }
-  .viewport {
+  } */
+  /* .viewport {
     max-width: 90vw;
-  }
+  } */
   /* youtube */
-  .you-viewport {
+  /* .you-viewport {
     width: 90vw;
-  }
+  } */
   /* ect */
   .ect-container {
     height: 480px;
