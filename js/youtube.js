@@ -43,14 +43,46 @@
     }
   } else {
     // 640px 미만에서 사용할 JavaScript
-    console.log(document.querySelector(".youtube").offsetWidth);
 
     const smallView = document.querySelector(".you-viewport");
     const smallyouItem = document.querySelector(".you-item").offsetWidth;
+    let smallCurrent = 0;
+    const smallContainer = document.querySelector(".youtube-container");
 
     smallView.style.transform = `translateX(${32}px)`;
-    console.log(smallyouItem);
     smallView.style.width = `${smallyouItem * 2}px`;
+
+    const smallyouControl = document.querySelectorAll(".you-control .bar-lg");
+
+    for (let j = 0; j < smallyouControl.length; j++) {
+      smallyouControl[j].dataset.index = [j];
+
+      smallyouControl.forEach((elem) => {
+        elem.addEventListener("click", function (e) {
+          smallyouControl[j].classList.remove("active");
+          console.log(e.target.dataset.index);
+          smallCurrent = parseInt(e.target.dataset.index);
+
+          if (smallCurrent == 0) {
+            smallContainer.style.transform = `translateX(0)`;
+            smallContainer.style.transition = "0.5s";
+          }
+          if (smallCurrent == 1) {
+            smallContainer.style.transform = `translateX(${
+              -smallCurrent * (smallyouItem * 2)
+            }px)`;
+            smallContainer.style.transition = "0.5s";
+          }
+          if (smallCurrent == 2) {
+            smallContainer.style.transform = `translateX(${
+              -smallCurrent * (smallyouItem * 2)
+            }px)`;
+            smallContainer.style.transition = "0.5s";
+          }
+        });
+        smallyouControl[smallCurrent].classList.add("active");
+      });
+    }
   }
 
   window.onresize = function () {
