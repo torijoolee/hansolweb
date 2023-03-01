@@ -120,19 +120,8 @@
     transform: scale(1);
   }
   /* blog */
-  .viewport {
-    /* width: calc(100%-560px);
-    height: 100%;
-    background-color: #fff;
-    z-index: 100; */
-  }
   .blog-contents {
-  }
-  .blog {
-    /* height: 700px; */
-  }
-  .blog-contents {
-    /* position: absolute; */
+    display: none;
   }
 
   /* youtube */

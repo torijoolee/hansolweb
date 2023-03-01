@@ -419,13 +419,15 @@ button {
   height: 800px;
   position: relative;
 }
-
-.scroll-con {
-  margin: 0 auto;
+.viewport {
+  overflow-x: hidden;
+  height: 100%;
+  z-index: 100;
+  background-color: black;
 }
+
 .blog-contents {
   position: absolute;
-  transform: translateX(0);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -435,8 +437,8 @@ button {
 .blog-item {
   cursor: pointer;
   min-width: 280px;
-  margin: 0 5px;
-  background: white;
+  padding: 0 5px;
+
   text-align: center;
 }
 
@@ -464,9 +466,9 @@ button {
   border-bottom: 1px solid rgba(0, 0, 0, 0.65);
 }
 .blog-item img {
-  padding-bottom: 32px;
   width: 100%;
   height: auto;
+  display: block;
 }
 .blog-item .blog-text h5 {
   all: unset;
@@ -476,6 +478,10 @@ button {
   font-size: 18px;
   font-weight: bold;
   display: inline;
+}
+.blog-text {
+  background-color: #fff;
+  padding-top: 32px;
 }
 .blog-text-sub {
   margin-top: 32px;
