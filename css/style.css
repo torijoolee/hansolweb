@@ -5,7 +5,7 @@ html {
 }
 body {
   min-width: 1280px;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 img {
   width: 100%;
@@ -162,7 +162,9 @@ h1 .logo {
 .menu li {
   margin-bottom: 12px;
 }
-
+.toggle-bar {
+  display: none;
+}
 /* visual */
 .visual {
   position: relative;
@@ -422,8 +424,10 @@ button {
   margin: 0 auto;
 }
 .blog-contents {
+  position: absolute;
+  transform: translateX(0);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   margin: 0 auto;
@@ -500,13 +504,13 @@ button {
 .you-viewport {
   overflow-x: hidden;
 }
+
 .youtube-container {
   display: flex;
 }
 
 .youtube-contents {
   height: 340px;
-  display: block;
   display: flex;
   margin: 0 auto;
 }
@@ -521,7 +525,7 @@ button {
   background-color: #2c5b78;
 }
 .you-item {
-  margin: 0 4px;
+  padding: 0 4px;
 }
 .img-text {
   text-align: center;

@@ -1,19 +1,24 @@
 @media (max-width: 640px) {
   /* nav */
 
+  body {
+    min-width: 640px;
+    overflow-x: hidden;
+  }
   .side-nav-menu,
   .nav-menu,
   .header-menu {
     display: none;
   }
-  .nav-side .logo {
-    width: 65px;
-  }
+
   .nav-side {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .toggle-bar {
+    display: block;
   }
   .toggle-bar i {
     color: black;
@@ -70,10 +75,12 @@
 
   /* magazine */
   .magazine {
-    height: 900px;
+    height: 600px;
   }
   .mag-container {
-    padding: 0 30px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
   }
   .mag-container .img-btn {
     display: none;
@@ -100,19 +107,41 @@
     width: 100%;
   }
   .pop-bg {
-    height: 1650px;
-    padding: 0 30px;
+    height: 1000px;
+    padding: 0 20px;
   }
   .pop-item {
     margin-bottom: 30px;
   }
   .pop-item img {
-    width: 600px;
+    width: 290px;
   }
   .pop-item img:hover {
     transform: scale(1);
   }
+  /* blog */
+  .viewport {
+    /* width: calc(100%-560px);
+    height: 100%;
+    background-color: #fff;
+    z-index: 100; */
+  }
+  .blog-contents {
+  }
+  .blog {
+    /* height: 700px; */
+  }
+  .blog-contents {
+    /* position: absolute; */
+  }
 
+  /* youtube */
+  .you-item {
+    display: none;
+  }
+  .ect-contents {
+    display: none;
+  }
   /* footer */
 
   .footer-btm > p {
