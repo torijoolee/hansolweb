@@ -166,6 +166,9 @@ h1 .logo {
 .toggle-bar {
   display: none;
 }
+.toggle-active {
+  display: none;
+}
 /* visual */
 .visual {
   position: relative;
