@@ -119,7 +119,9 @@
     transform: scale(1);
   }
   /* blog */
-
+  .blog {
+    height: 720px;
+  }
   /* ect */
   .ect-container {
     height: 480px;
