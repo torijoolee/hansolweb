@@ -3,19 +3,22 @@
     // 640px 이상에서 사용할 JavaScript
     // viewport
 
+    const desktopWidth = document.querySelector(".youtube").offsetWidth;
     const youtubeBar = document.querySelectorAll(".youtube .bar-lg");
     let container = document.querySelector(".youtube-container");
     const itemWidth = document.querySelector(".you-item").offsetWidth;
     let current = 0;
-    let firstView = (container.style.transform = `translateX(${
-      itemWidth / 2
-    }px)`);
+    let firstView = (container.style.transform = `translateX(${itemWidth}px)`);
     const viewport = document.querySelector(".you-viewport");
 
     container.style.transform = `translateX(${0}px)`;
+
     viewport.style.background = "transparent";
     viewport.style.width = `${itemWidth * 4}px`;
-    viewport.style.transform = `${firstView}`;
+
+    viewport.style.transform = `translateX(${
+      (desktopWidth - itemWidth * 4) / 2
+    }px)`;
 
     // moving
     for (let i = 0; i < youtubeBar.length; i++) {
@@ -24,7 +27,6 @@
         bar.addEventListener("click", (e) => {
           youtubeBar[i].classList.remove("active");
           current = parseInt(e.target.dataset.link);
-          youtubeBar[current].classList.add("active");
 
           if (current == 0) {
             container.style.transform = `translateX(${0}px)`;
@@ -39,6 +41,7 @@
             container.style.transition = `0.5s`;
           }
         });
+        youtubeBar[current].classList.add("active");
       });
     }
   } else {

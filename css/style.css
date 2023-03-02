@@ -5,6 +5,7 @@ html {
 }
 body {
   min-width: 1280px;
+
   /* overflow-x: hidden; */
 }
 img {
@@ -376,8 +377,11 @@ button {
 }
 
 .pop-contents {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: no-wrap;
+  align-items: center;
   justify-content: space-between;
   text-align: center;
   flex-shrink: 0;
@@ -418,6 +422,7 @@ button {
   background-color: #f2f0ed;
   height: 800px;
   position: relative;
+  margin: 0 auto;
 }
 .viewport {
   overflow-x: hidden;
@@ -505,6 +510,7 @@ button {
 /* youtube */
 .youtube {
   width: 100%;
+  margin: 0 auto;
 }
 .you-viewport {
   overflow-x: hidden;
@@ -512,12 +518,15 @@ button {
 
 .youtube-container {
   display: flex;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .youtube-contents {
   height: 340px;
   display: flex;
   margin: 0 auto;
+  width: 100%;
 }
 
 .youtube-contents .you-item:hover span {
@@ -692,7 +701,10 @@ input {
   padding: 0 22px;
   flex-direction: column;
 }
-
+.ect-contents {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .ect-search select,
 .ect-search input,
 .ect-search button {

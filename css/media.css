@@ -76,11 +76,9 @@
   /* magazine */
   .magazine {
     height: 600px;
-  }
-  .mag-container {
     width: 100%;
-    margin: 0 auto;
   }
+
   .mag-container .img-btn {
     display: none;
   }
@@ -88,16 +86,10 @@
     display: none;
   }
   .slide-box-item img {
-    width: 190%;
+    width: 100%;
     display: block;
   }
-  .slide-box-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    margin: 0 auto;
-  }
+
   /* popular */
   .pop-contents {
     flex-wrap: wrap;
