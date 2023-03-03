@@ -56,6 +56,9 @@ a {
   margin-bottom: 40px;
   opacity: 0.65;
 }
+.toggle {
+  display: none;
+}
 /* header nav-bar*/
 .header-menu {
   width: 100vw;
