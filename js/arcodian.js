@@ -1,5 +1,12 @@
-const panelElems = document.querySelectorAll(".panel-heading");
+const toggleBar = document.querySelector(".header .toggle-bar");
+const showElem = document.querySelector(".toggle-con");
 
+toggleBar.addEventListener("click", function () {
+  console.log("clicked");
+  showElem.classList.toggle("show");
+});
+
+const panelElems = document.querySelectorAll(".panel-heading");
 const detailElems = document.querySelectorAll("details");
 const panel = document.querySelectorAll(".panel-heading span");
 

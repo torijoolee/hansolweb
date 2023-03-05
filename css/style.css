@@ -56,9 +56,7 @@ a {
   margin-bottom: 40px;
   opacity: 0.65;
 }
-.toggle {
-  display: none;
-}
+
 /* header nav-bar*/
 .header-menu {
   width: 100vw;
@@ -166,16 +164,12 @@ h1 .logo {
 .menu li {
   margin-bottom: 12px;
 }
-.toggle-bar {
-  display: none;
-}
-.toggle-active {
-  display: none;
-}
+
 /* visual */
 .visual {
   position: relative;
 }
+
 .img-con > .slide {
   height: 690px;
 }
@@ -327,6 +321,9 @@ button {
   height: 5px;
   opacity: 0.5;
 }
+.mag-container .bar-lg {
+  pointer-events: none;
+}
 
 .slide-box-item {
   display: flex;
@@ -334,6 +331,9 @@ button {
   align-items: center;
   position: absolute;
   width: 100%;
+}
+.magazine .con-btn {
+  display: none;
 }
 
 .box-right img {
