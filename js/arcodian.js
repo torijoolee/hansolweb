@@ -1,13 +1,30 @@
-const toggleBar = document.querySelector(".toggle-bar");
-
 const panelElems = document.querySelectorAll(".panel-heading");
 
-panelElems.forEach((item) => {
-  item.addEventListener("click", function (e) {
-    for (let i = 0; i < panelElems.length; i++) {
-      panelElems[i].classList.remove("active");
+const detailElems = document.querySelectorAll("details");
+const panel = document.querySelectorAll(".panel-heading span");
+
+panelElems.forEach(function (item) {
+  item.addEventListener("click", function (event) {
+    let clicked = event.target;
+    console.log(clicked);
+    panel.forEach((span) => {
+      if (clicked == span) {
+        clicked.parentNode.classList.toggle("active");
+      }
+    });
+  });
+});
+
+detailElems.forEach(function (item) {
+  item.addEventListener("toggle", (event) => {
+    let toggled = event.target;
+    console.log(toggled);
+    if (toggled.attributes.open) {
+      document.querySelectorAll("details[open]").forEach(function (opened) {
+        if (toggled != opened) {
+          opened.removeAttribute("open");
+        }
+      });
     }
-    console.log(e.target);
-    e.target.parentNode.classList.toggle("active");
   });
 });
