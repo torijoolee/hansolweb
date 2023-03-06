@@ -2,16 +2,24 @@
   cursor: pointer;
 }
 .toggle-con {
-  cursor: none;
   opacity: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  height: 0;
+  transform-origin: top;
+  transition: all 0.5s ease-in;
 }
 .toggle-con.show {
   opacity: 1;
+  height: 100%;
 }
+
 .toggle {
   position: absolute;
-  top: 61px;
-  z-index: 100;
+  top: 60.5px;
+  z-index: 105;
   width: 100%;
 }
 
@@ -36,6 +44,7 @@ details {
 summary {
   display: block;
 }
+
 input {
   display: none;
 }
@@ -44,14 +53,13 @@ label {
   display: flex;
   align-items: center;
   padding-left: 1rem;
-  height: 50px;
+  height: 51px;
   background-color: #244966;
   color: white;
   font-size: 18px;
   width: 100%;
   cursor: pointer;
-  border-bottom: 1px solid rgba(248, 248, 248, 0.3);
-  padding: 0 30px;
+  padding: 0 20px;
 }
 label::before {
   content: "›";
@@ -61,6 +69,15 @@ label::before {
   display: flex;
   margin-right: 10px;
   transition: all 0.3s ease-out;
+}
+label::after {
+  content: "";
+  width: 100%;
+  height: 49px;
+  left: 0;
+  position: absolute;
+  border-bottom: 1px solid whitesmoke;
+  opacity: 0.3;
 }
 input:checked + details,
 details:has(input:checked) {

@@ -29,15 +29,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
   }
   .toggle-bar {
     display: block;
+    z-index: 200;
   }
 
   .toggle-bar i {
     color: black;
     opacity: 0.65;
     font-size: x-large;
+    z-index: 200;
   }
   /* visual */
 
