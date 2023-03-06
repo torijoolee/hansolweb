@@ -58,6 +58,9 @@ a {
 }
 
 /* header nav-bar*/
+.header-wrap {
+  z-index: 2000;
+}
 .header-menu {
   width: 100vw;
   height: 230px;

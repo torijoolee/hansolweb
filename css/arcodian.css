@@ -2,24 +2,25 @@
   cursor: pointer;
 }
 .toggle-con {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
   top: 0;
   height: 0;
   transform-origin: top;
-  transition: all 0.5s ease-in;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
 }
 .toggle-con.show {
   opacity: 1;
-  height: 100%;
+  height: 1000px;
 }
 
 .toggle {
   position: absolute;
   top: 60.5px;
-  z-index: 105;
+  z-index: 1000;
   width: 100%;
 }
 
@@ -69,6 +70,7 @@ label::before {
   display: flex;
   margin-right: 10px;
   transition: all 0.3s ease-out;
+  opacity: 0.65;
 }
 label::after {
   content: "";
@@ -166,7 +168,7 @@ details:has(input:checked) label::before {
   display: block;
   width: 100%;
   height: 0px;
-  border: 1px solid #efece8;
+  border: 0.5px solid #efece8;
   opacity: 1;
 }
 .panel-heading li:nth-child(2)::before {

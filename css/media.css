@@ -19,6 +19,9 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     height: 60px;
     padding: 0 25px;
+    z-index: 2000;
+    background-color: #fff;
+    position: relative;
   }
   h1 .logo {
     height: 50px;
@@ -33,14 +36,14 @@
   }
   .toggle-bar {
     display: block;
-    z-index: 200;
+    z-index: 2000;
   }
 
   .toggle-bar i {
     color: black;
     opacity: 0.65;
     font-size: x-large;
-    z-index: 200;
+    z-index: 2000;
   }
   /* visual */
 
@@ -52,6 +55,7 @@
     position: relative;
   }
   .mobile-visual .img-btn {
+    z-index: 105;
     color: transparent;
     display: block;
     position: absolute;
