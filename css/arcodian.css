@@ -46,7 +46,7 @@ summary {
   display: block;
 }
 
-input {
+.multi-accordion input {
   display: none;
 }
 label {
@@ -131,13 +131,15 @@ details:has(input:checked) label::before {
 } */
 
 .panel .panel-heading li {
-  height: 50px;
+  height: 0px;
+  overflow-y: hidden;
   width: 100%;
   background-color: #fff;
   z-index: 300;
   color: black;
   font-weight: 400;
-  display: none;
+
+  transition: all 0.5s ease-in-out;
 }
 .panel .panel-heading.active li {
   height: 50px;
@@ -145,7 +147,6 @@ details:has(input:checked) label::before {
   background-color: #fff;
   color: black;
   font-weight: 400;
-  display: block;
 }
 
 .panel .panel-heading li a {

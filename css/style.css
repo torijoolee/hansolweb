@@ -96,6 +96,9 @@ h1 .logo {
   background-position: center;
   color: transparent;
 }
+.toggle-bar {
+  display: none;
+}
 .nav-side {
   display: flex;
   align-items: center;
@@ -583,13 +586,13 @@ button {
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
-
   height: 100%;
 }
 .ect-item {
   width: 280px;
   height: 280px;
   margin: 0 4px;
+  position: relative;
 }
 
 .ect-contents > a {
@@ -601,9 +604,11 @@ button {
   transition: all 0.3s ease-in-out;
 }
 .ect-contents > a span {
-  position: relative;
   opacity: 0;
   transition: all 0.5s;
+  position: absolute;
+  top: 0;
+  left: 4px;
 }
 .ect-text {
   position: absolute;
@@ -617,7 +622,7 @@ button {
   background: rgba(45, 91, 121, 0.5);
   display: block;
   position: absolute;
-  width: 100%;
+  width: 280px;
   height: 100%;
   opacity: 1;
   top: 0;
@@ -685,6 +690,9 @@ input {
   padding: 16px 28px;
   border-bottom: 1px solid white;
 }
+.ect-items li:nth-child(2) {
+  border-bottom: none;
+}
 .ect-card .more {
   position: absolute;
   top: 18px;
@@ -750,9 +758,15 @@ input {
   position: relative;
 }
 .footer-btm {
-  height: 211px;
+  padding: 0 130px;
+  height: 210px;
   background-color: #4c5559;
   width: 100%;
+  color: white;
+  font-size: 14px;
+  line-height: 180%;
+  font-weight: 350;
+  position: relative;
 }
 .footer-top-left {
   display: flex;
@@ -810,13 +824,7 @@ input {
 .footer-top-right p span {
   font-size: 12px;
 }
-.footer-btm {
-  color: white;
-  font-size: 14px;
-  line-height: 180%;
-  font-weight: 350;
-  position: relative;
-}
+
 .footer-btm > p {
   position: absolute;
   top: 40px;
