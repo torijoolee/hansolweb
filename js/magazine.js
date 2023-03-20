@@ -1,5 +1,7 @@
 (() => {
   // magazine caresel
+
+  // if (matchMedia("screen and (min-width:640px)").matches) {
   const slideBox = document.querySelector(".magazine .slide-box");
   const slideItem = document.querySelectorAll(".slide-box .slide-box-item");
   const prevBtn = document.querySelector(".mag-container .prev");
@@ -8,7 +10,6 @@
 
   let currentPage = 1;
   let totalPage = slideItem.length;
-  //5
   const size = slideItem[0].clientWidth;
   console.log(size);
 
@@ -49,7 +50,6 @@
       slideBox.style.transform = `translateX( ${currentPage * -size}px)`;
       jump();
       barActive();
-      clearInterval(autoPlay);
     } else {
       clearInterval(autoPlay);
       return;
@@ -96,4 +96,14 @@
     jump();
     barActive();
   });
+  // } else {
+  //   const smallSlideItem = document.querySelectorAll(
+  //     ".slide-box .slide-box-item"
+  //   );
+
+  //   const smallSize = smallSlideItem[0].clientWidth;
+  //   for (let j = 0; j < smallSlideItem.length; j++) {
+  //     smallSlideItem[j].style.left = j * smallSize + "px";
+  //   }
+  // }
 })();
